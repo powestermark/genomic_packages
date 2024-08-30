@@ -1,0 +1,16 @@
+Package: TxDb.Mmusculus.UCSC.mm9.ensGene
+Title: Annotation package for TxDb object(s)
+Description: Exposes an annotation databases generated from UCSC by exposing these as TxDb objects
+Version: 0.08
+Author: Pal O. Westermark <westermark@fbn-dummerstorf.de> [cre]
+Maintainer: Pal O. Westermark <westermark@fbn-dummerstorf.de>
+Depends: GenomicFeatures
+Imports: AnnotationDbi
+License: Artistic-2.0
+organism: Mus musculus
+species: Mus musculus
+provider: UCSC
+provider_version: mm9 genome based on the ensGene table
+release_date: 2024-08-30 16:30:47 +0200 (Fri, 30 Aug 2024)
+resource_url: https://genome.ucsc.edu/
+biocViews: AnnotationData, Genetics, TxDb, Mus_musculus
