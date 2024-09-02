@@ -2,6 +2,11 @@
 # Note that locally, RMariaDB works with mariadb-connector-c version 3.3.8,
 # but not with 3.4.1.
 library(txdbmaker)
+library(msigdbr)
+library(GSEABase)
+library(rjson)
+library(tidyverse)
+library(pwrutilities)
 
 
 
@@ -41,3 +46,6 @@ makeTxDbPackageFromUCSC(
   circ_seqs = "chrM",
   miRBaseBuild="GRCm38"
 )
+
+
+
