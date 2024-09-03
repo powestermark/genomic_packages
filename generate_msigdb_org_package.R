@@ -73,8 +73,9 @@ pkg_path <- AnnotationForge::makeOrgPackage(
 
 
 
-# Transform the string by removing leading "./" and appending ".tar.gz"
-# output_file <- str_c(str_remove(pkg_path, "^\\./"), ".tar.gz")
+output_file <- paste0(pkg_path, ".tar.gz")
+utils::tar(tarfile = output_file, files = pkg_path, compression = "gzip")
+unlink(pkg_path, recursive = TRUE)
 
-# Create a gzip compressed tarball of the package directory
-# utils::tar(tarfile = output_file, files = pkg_path, compression = "gzip")
+renv::install(output_file)
+renv::settings$ignored.packages("org.MmsigdbC5.eg.db")
